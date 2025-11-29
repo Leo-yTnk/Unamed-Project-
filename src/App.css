@@ -7,17 +7,79 @@
 
 :root {
 	/* Colors */
-	--light-indigo: color-mix(in srgb, var(--indigo) 60%, white);
+	--opacity: 80%;
+
+	--light-indigo: color-mix(in srgb, var(--indigo) 90%, white);
 	--indigo: rgb(70, 20, 255);
-	--dark-indigo: color-mix(in srgb, var(--indigo) 65%, black);
+	--dark-indigo: color-mix(in srgb, var(--indigo) 50%, black);
 
-	--light-blue: color-mix(in srgb, var(--blue) 60%, white);
+	--transparent-light-indigo: color-mix(in srgb, var(--light-indigo) var(--opacity), transparent);
+	--transparent-indigo: color-mix(in srgb, var(--indigo) var(--opacity), transparent);
+	--transparent-dark-indigo: color-mix(in srgb, var(--dark-indigo) var(--opacity), transparent);
+
+	--light-blue: color-mix(in srgb, var(--blue) 90%, white);
 	--blue: rgb(20, 70, 255);
-	--dark-blue: color-mix(in srgb, var(--blue) 65%, black);
+	--dark-blue: color-mix(in srgb, var(--blue) 50%, black);
+	
+	--transparent-light-blue: color-mix(in srgb, var(--light-blue) var(--opacity), transparent);
+	--transparent-blue: color-mix(in srgb, var(--blue) var(--opacity), transparent);
+	--transparent-dark-blue: color-mix(in srgb, var(--dark-blue) var(--opacity), transparent);
 
-	--light-yellow: color-mix(in srgb, var(--yellow) 60%, white);
+	--light-yellow: color-mix(in srgb, var(--yellow) 90%, white);
 	--yellow: rgb(255, 180, 50);
 	--dark-yellow: color-mix(in srgb, var(--yellow) 65%, black);
+
+	--transparent-light-yellow: color-mix(in srgb, var(--light-yellow) var(--opacity), transparent);
+	--transparent-yellow: color-mix(in srgb, var(--yellow) var(--opacity), transparent);
+	--transparent-dark-yellow: color-mix(in srgb, var(--dark-yellow) var(--opacity), transparent);
+
+	--gray1: var(--lgray1);
+	--gray2: var(--lgray2);
+	--gray3: var(--lgray3);
+	--gray4: var(--lgray4);
+	--gray5: var(--lgray5);
+	--gray6: var(--lgray6);
+
+	--tgray1: var(--tlgray1);
+	--tgray2: var(--tlgray2);
+	--tgray3: var(--tlgray3);
+	--tgray4: var(--tlgray4);
+	--tgray5: var(--tlgray5);
+	--tgray6: var(--tlgray6);
+	
+	--lgray-base: rgb(255, 255, 255);
+	--lstep: 5%;
+
+	--lgray1: color-mix(in srgb, var(--lgray-base) calc(100% - var(--lstep)), black);
+	--lgray2: color-mix(in srgb, var(--lgray-base) calc(100% - var(--lstep) * 2), black);
+	--lgray3: color-mix(in srgb, var(--lgray-base) calc(100% - var(--lstep) * 3), black);
+	--lgray4: color-mix(in srgb, var(--lgray-base) calc(100% - var(--lstep) * 4), black);
+	--lgray5: color-mix(in srgb, var(--lgray-base) calc(100% - var(--lstep) * 5), black);
+	--lgray6: color-mix(in srgb, var(--lgray-base) calc(100% - var(--lstep) * 6), black);
+
+	--dgray-base: rgb(0, 0, 5);
+	--dstep: 5%;
+
+	--dgray1: color-mix(in srgb, var(--dgray-base) calc(100% - var(--dstep) * 1), white);
+	--dgray2: color-mix(in srgb, var(--dgray-base) calc(100% - var(--dstep) * 2), white);
+	--dgray3: color-mix(in srgb, var(--dgray-base) calc(100% - var(--dstep) * 3), white);
+	--dgray4: color-mix(in srgb, var(--dgray-base) calc(100% - var(--dstep) * 4), white);
+	--dgray5: color-mix(in srgb, var(--dgray-base) calc(100% - var(--dstep) * 5), white);
+	--dgray6: color-mix(in srgb, var(--dgray-base) calc(100% - var(--dstep) * 6), white);
+
+	--tlgray1: color-mix(in srgb, var(--lgray1) var(--opacity), transparent);
+	--tlgray2: color-mix(in srgb, var(--lgray2) var(--opacity), transparent);
+	--tlgray3: color-mix(in srgb, var(--lgray3) var(--opacity), transparent);
+	--tlgray4: color-mix(in srgb, var(--lgray4) var(--opacity), transparent);
+	--tlgray5: color-mix(in srgb, var(--lgray5) var(--opacity), transparent);
+	--tlgray6: color-mix(in srgb, var(--lgray6) var(--opacity), transparent);
+
+	--tldgray1: color-mix(in srgb, var(--dgray1) var(--opacity), transparent);
+	--tldgray2: color-mix(in srgb, var(--dgray2) var(--opacity), transparent);
+	--tldgray3: color-mix(in srgb, var(--dgray3) var(--opacity), transparent);
+	--tldgray4: color-mix(in srgb, var(--dgray4) var(--opacity), transparent);
+	--tldgray5: color-mix(in srgb, var(--dgray5) var(--opacity), transparent);
+	--tldgray6: color-mix(in srgb, var(--dgray6) var(--opacity), transparent);
 
 	/* Font Size */
 	--fs-1: 2.986rem;
@@ -26,6 +88,61 @@
 	--fs-4: 1.728rem;
 	--fs-5: 1.44rem;
 	--fs-6: 1.2rem;
+
+	/* General */
+	--default-bw: 1px;
+
+	/* Body */
+	--body-bg-color: var(--gray1);
+	--body-bg-grid-color: var(--gray2);
+	--body-bg-grid-size: 1.5rem;
+
+	/* Main Nav */
+	--main-nav-height: 3rem;
+	--main-nav-bg-color: linear-gradient(
+		90deg,
+		var(--dark-indigo),
+		var(--indigo)
+	);
+	--main-nav-bd-color: var(--light-indigo);
+
+	--main-nav-a-height: calc(var(--main-nav-height));
+	--main-nav-a-width: calc(var(--main-nav-height));
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --gray1: var(--dgray1);
+		--gray2: var(--dgray2);
+		--gray3: var(--dgray3);
+		--gray4: var(--dgray4);
+		--gray5: var(--dgray5);
+		--gray6: var(--dgray6);
+
+		--tgray1: var(--tdgray1);
+		--tgray2: var(--tdgray2);
+		--tgray3: var(--tdgray3);
+		--tgray4: var(--tdgray4);
+		--tgray5: var(--tdgray5);
+		--tgray6: var(--tdgray6);
+    }
+}
+
+body {
+	background-color: var(--body-bg-color);
+    background-image:
+        linear-gradient(
+			to right, 
+			var(--body-bg-grid-color) var(--default-bw), 
+			transparent var(--default-bw)
+		),
+        linear-gradient(
+			to bottom, 
+			var(--body-bg-grid-color) var(--default-bw), 
+			transparent var(--default-bw)
+		);
+    background-size: var(--body-bg-grid-size) var(--body-bg-grid-size);
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,12 +157,59 @@ h4 { font-size: var(--fs-4); }
 h5 { font-size: var(--fs-5); }
 h6 { font-size: var(--fs-6); }
 
+@keyframes slideUp {
+	to {
+		bottom: 0;
+	}
+}
 
+.main-nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	bottom: -100%;
+	height: var(--main-nav-height);
+	width: 100%;
+	background: var(--main-nav-bg-color);
+	border-top: var(--default-bw) solid var(--main-nav-bd-color);
+	animation: slideUp 1s ease forwards;
+}
+
+.main-nav ul {
+	list-style: none;
+	height: 100%;
+}
+
+.main-nav ul li {
+	height: 100%;
+}
+
+.main-nav ul li a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: var(--main-nav-a-height);
+	width: var(--main-nav-a-width);
+	padding: var(--main-nav-a-padding);
+}
+
+.main-nav ul li a * {
+	color: white;
+}
+
+.main-nav ul li a {
+	text-decoration: none;
+}
+
+.main-nav ul li a span {
+	display: none;
+}
 
 @media (min-width: 768px) and (max-width: 1023px) { 
 	
 }
 
 @media (min-width: 1024px) { 
-	
+
 }
